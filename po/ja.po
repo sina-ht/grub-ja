@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: grub 2.06-pre1\n"
 "Report-Msgid-Bugs-To: bug-grub@gnu.org\n"
 "POT-Creation-Date: 2021-03-12 18:43+0100\n"
-"PO-Revision-Date: 2021-05-11 07:40+0900\n"
+"PO-Revision-Date: 2021-05-16 23:17+0900\n"
 "Last-Translator: Hiroshi Takekawa <sian@big.or.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -3786,9 +3786,8 @@ msgid "retrieve DHCP option and save it into VAR. If VAR is - then print the val
 msgstr ""
 
 #: grub-core/net/dns.c:466
-#, fuzzy
 msgid "no DNS servers configured"
-msgstr "<b>DHCPサーバがインストールされていません</b>"
+msgstr "DNS サーバが一つも設定されていません"
 
 #: grub-core/net/dns.c:529
 msgid "domain name component is too long"
@@ -3831,19 +3830,16 @@ msgid "DNSSERVER"
 msgstr ""
 
 #: grub-core/net/dns.c:770
-#, fuzzy
 msgid "Add a DNS server"
-msgstr "CDDBサーバ名"
+msgstr "DNS サーバを追加"
 
 #: grub-core/net/dns.c:773
-#, fuzzy
 msgid "Remove a DNS server"
-msgstr "CDDBサーバ名"
+msgstr "DNS サーバを削除"
 
 #: grub-core/net/dns.c:775
-#, fuzzy
 msgid "List DNS servers"
-msgstr "<b>DHCPサーバがインストールされていません</b>"
+msgstr "DNS サーバの一覧"
 
 #: grub-core/net/drivers/efi/efinet.c:49 grub-core/net/drivers/efi/efinet.c:65
 #: grub-core/net/drivers/efi/efinet.c:77 grub-core/net/drivers/emu/emunet.c:62
@@ -3867,21 +3863,20 @@ msgid "free-mem failed"
 msgstr ""
 
 #: grub-core/net/http.c:105
-#, fuzzy
 msgid "unsupported HTTP response"
-msgstr "HTTP サーバへ接続中..."
+msgstr "サポートしていない HTTP レスポンス"
 
 #. TRANSLATORS: GRUB HTTP code is pretty young. So even perfectly
 #. valid answers like 403 will trigger this very generic message.
 #: grub-core/net/http.c:126
-#, fuzzy, c-format
+#, c-format
 msgid "unsupported HTTP error %d: %s"
-msgstr "libnotify の初期化に失敗しました"
+msgstr "サポートしていない HTTP エラー %d: %s"
 
 #: grub-core/net/http.c:429 grub-core/net/tftp.c:396
-#, fuzzy, c-format
+#, c-format
 msgid "time out opening `%s'"
-msgstr "`%s' を開けません"
+msgstr "`%s' をオープンしようとしてタイムアウト"
 
 #: grub-core/net/net.c:184
 msgid "timeout: could not resolve hardware address"
@@ -3909,9 +3904,8 @@ msgid "route loop detected"
 msgstr ""
 
 #: grub-core/net/net.c:705
-#, fuzzy
 msgid "address not found"
-msgstr "%s はディレクトリではありません!"
+msgstr "アドレスが見つかみません"
 
 #: grub-core/net/net.c:709
 msgid "you can't delete this address"
@@ -3923,19 +3917,17 @@ msgid "Unsupported hw address type %d\n"
 msgstr ""
 
 #: grub-core/net/net.c:818
-#, fuzzy, c-format
+#, c-format
 msgid "Unsupported address type %d\n"
-msgstr "IM $IM_CONFIG_XINPUTRC_TYPE $IM_CONFIG_XINPUTRC を削除。"
+msgstr "アドレスタイプ %d はサポートしていません\n"
 
 #: grub-core/net/net.c:1022 grub-core/net/net.c:1136
-#, fuzzy
 msgid "three arguments expected"
-msgstr "%s: 引数が多すぎます\n"
+msgstr "引数は3つです"
 
 #: grub-core/net/net.c:1028
-#, fuzzy
 msgid "card not found"
-msgstr "%s はディレクトリではありません!"
+msgstr "ネットワークカードが見つかりません"
 
 #. TRANSLATORS: it refers to the network address.
 #: grub-core/net/net.c:1172
@@ -3943,14 +3935,13 @@ msgid "temporary"
 msgstr ""
 
 #: grub-core/net/net.c:1195
-#, fuzzy, c-format
+#, c-format
 msgid "Unknown address type %d\n"
-msgstr "IM $IM_CONFIG_XINPUTRC_TYPE $IM_CONFIG_XINPUTRC を削除。"
+msgstr "不明なアドレスタイプです %d\n"
 
 #: grub-core/net/net.c:1303
-#, fuzzy
 msgid "no server is specified"
-msgstr "存在しない設定ファイルが指定された。"
+msgstr "サーバが指定されていません"
 
 #: grub-core/net/net.c:1642
 #, c-format
@@ -3964,9 +3955,8 @@ msgid "SHORTNAME CARD ADDRESS [HWADDRESS]"
 msgstr ""
 
 #: grub-core/net/net.c:1900
-#, fuzzy
 msgid "Add a network address."
-msgstr "<b>機器の追加に失敗しました</b>"
+msgstr "ネットワークアドレスを追加。"
 
 #: grub-core/net/net.c:1903
 msgid "[CARD [HWADDRESS]]"
@@ -3977,14 +3967,12 @@ msgid "Perform an IPV6 autoconfiguration"
 msgstr ""
 
 #: grub-core/net/net.c:1907 grub-core/net/net.c:1914
-#, fuzzy
 msgid "SHORTNAME"
-msgstr "VARNAME"
+msgstr "SHORTNAME"
 
 #: grub-core/net/net.c:1908
-#, fuzzy
 msgid "Delete a network address."
-msgstr "シリアルポートのアドレスを設定します"
+msgstr "ネットワークアドレスを削除。"
 
 #. TRANSLATORS: "gw" is a keyword.
 #: grub-core/net/net.c:1911
@@ -3992,9 +3980,8 @@ msgid "SHORTNAME NET [INTERFACE| gw GATEWAY]"
 msgstr ""
 
 #: grub-core/net/net.c:1912
-#, fuzzy
 msgid "Add a network route."
-msgstr "<b>機器の追加に失敗しました</b>"
+msgstr "ネットワークルートを追加。"
 
 #: grub-core/net/net.c:1915
 msgid "Delete a network route."
@@ -4013,14 +4000,12 @@ msgid "list network addresses"
 msgstr ""
 
 #: grub-core/net/tcp.c:681
-#, fuzzy
 msgid "connection refused"
-msgstr "接続を拒否されました:"
+msgstr "接続を拒否されました"
 
 #: grub-core/net/tcp.c:684
-#, fuzzy
 msgid "connection timeout"
-msgstr "接続を拒否されました:"
+msgstr "接続がタイムアウトしました"
 
 #: grub-core/normal/auth.c:220
 msgid "Enter username: "
@@ -4085,9 +4070,8 @@ msgid "Export variables."
 msgstr ""
 
 #: grub-core/normal/dyncmd.c:187
-#, fuzzy
 msgid "module isn't loaded"
-msgstr "ロードされませんでした"
+msgstr "モジュールがロードされていません"
 
 #: grub-core/normal/main.c:212
 #, fuzzy, c-format
