@@ -5,10 +5,10 @@
 # Hiroshi Takekawa <sian@big.or.jp>, <sian.ht@gmail.com>, 2021.
 msgid ""
 msgstr ""
-"Project-Id-Version: grub 2.06-pre1\n"
+"Project-Id-Version: grub 2.06-pre2\n"
 "Report-Msgid-Bugs-To: bug-grub@gnu.org\n"
 "POT-Creation-Date: 2021-03-12 18:43+0100\n"
-"PO-Revision-Date: 2021-05-16 23:17+0900\n"
+"PO-Revision-Date: 2022-01-02 16:31+0900\n"
 "Last-Translator: Hiroshi Takekawa <sian@big.or.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -4074,9 +4074,9 @@ msgid "module isn't loaded"
 msgstr "モジュールがロードされていません"
 
 #: grub-core/normal/main.c:212
-#, fuzzy, c-format
+#, c-format
 msgid "GNU GRUB  version %s"
-msgstr "GNU アセンブラ バージョン %s (%s)、BFD バージョン %s を使用\n"
+msgstr "GNU GRUB  バージョン %s"
 
 #: grub-core/normal/main.c:378
 msgid "ESC at any time exits."
@@ -4119,9 +4119,9 @@ msgid "Booting `%s'"
 msgstr ""
 
 #: grub-core/normal/menu.c:826
-#, fuzzy, c-format
+#, c-format
 msgid "Falling back to `%s'"
-msgstr "  VALUE     設定する値\n"
+msgstr "`%s' にフォールバック"
 
 #: grub-core/normal/menu.c:842
 msgid "Failed to boot both default and fallback entries.\n"
@@ -4136,9 +4136,9 @@ msgid "Minimum Emacs-like screen editing is supported. TAB lists completions. Pr
 msgstr ""
 
 #: grub-core/normal/menu_text.c:170
-#, fuzzy, c-format
+#, c-format
 msgid "Use the %C and %C keys to select which entry is highlighted."
-msgstr "ハイライトするエントリを選択するには %C ならびに %C キーを使ってください。\n"
+msgstr "ハイライトするエントリを選択するには %C ならびに %C キーを使ってください。"
 
 #. TRANSLATORS: that's the list of binary unit prefixes.
 #: grub-core/normal/misc.c:38
@@ -4231,9 +4231,9 @@ msgid "Filesystem type %s"
 msgstr "ファイルシステムの種類 %s"
 
 #: grub-core/normal/misc.c:131
-#, fuzzy, c-format
+#, c-format
 msgid "- Label `%s'"
-msgstr "アクセラレータのラベル"
+msgstr "- ラベル `%s'"
 
 #. TRANSLATORS: Arguments are year, month, day, hour, minute,
 #. second, day of the week (translated).
@@ -4257,14 +4257,13 @@ msgid " - Sector size %uB"
 msgstr ""
 
 #: grub-core/normal/misc.c:180
-#, fuzzy
 msgid " - Total size unknown"
-msgstr "不明なエスケープ '\\%c' が文字列内にあります。無視されました"
+msgstr " - トータルサイズは不明"
 
 #: grub-core/normal/misc.c:182
-#, fuzzy, c-format
+#, c-format
 msgid " - Total size %llu%sKiB"
-msgstr "不明なエスケープ '\\%c' が文字列内にあります。無視されました"
+msgstr " - トータルサイズは %llu%sKiB"
 
 #. TRANSLATORS: Replace dot with appropriate decimal separator for
 #. your language.
@@ -4280,13 +4279,13 @@ msgstr ""
 
 #: grub-core/osdep/aros/config.c:92 grub-core/osdep/unix/config.c:137
 #: grub-core/osdep/windows/config.c:55
-#, fuzzy, c-format
+#, c-format
 msgid "cannot open configuration file `%s': %s"
-msgstr "%s を開けません"
+msgstr "設定ファイル `%s' を開けません: %s"
 
 #: grub-core/osdep/aros/hostdisk.c:523
 msgid "Success"
-msgstr ""
+msgstr "成功"
 
 #: grub-core/osdep/basic/compress.c:8 grub-core/osdep/basic/compress.c:14
 #: grub-core/osdep/basic/compress.c:20
@@ -4328,9 +4327,8 @@ msgstr ""
 #.
 #: grub-core/osdep/freebsd/getroot.c:82 grub-core/osdep/freebsd/getroot.c:164
 #: grub-core/osdep/freebsd/getroot.c:258 grub-core/osdep/freebsd/getroot.c:316
-#, fuzzy
 msgid "couldn't open geom"
-msgstr "%s: `%s' がオープンできません\n"
+msgstr "geom を開けません"
 
 #: grub-core/osdep/freebsd/getroot.c:182 grub-core/osdep/freebsd/getroot.c:277
 msgid "couldn't find geli consumer"
@@ -4348,9 +4346,8 @@ msgid "couldn't find geom `part' class"
 msgstr ""
 
 #: grub-core/osdep/freebsd/hostdisk.c:72 grub-core/osdep/linux/hostdisk.c:93
-#, fuzzy
 msgid "unaligned device size"
-msgstr "%(service)s on %(device)s"
+msgstr "デバイスサイズがアライメント境界になっていません"
 
 #: grub-core/osdep/generic/blocklist.c:56
 #, c-format
@@ -4363,14 +4360,13 @@ msgid "attempting to read the core image `%s' from GRUB again"
 msgstr ""
 
 #: grub-core/osdep/generic/blocklist.c:115
-#, fuzzy, c-format
+#, c-format
 msgid "cannot read `%s' correctly"
-msgstr "  @FILE                   オプションを FILE から読み込む\n"
+msgstr "`%s' を正しく読み込みませんでした"
 
 #: grub-core/osdep/generic/blocklist.c:126
-#, fuzzy
 msgid "failed to read the sectors of the core image"
-msgstr "コアファイルのセクターがひどく断片化しています"
+msgstr "コアイメージのセクターが読みこめません"
 
 #. TRANSLATORS: On GNU/Hurd, a "translator" is similar to a filesystem
 #. mount, but handled by a userland daemon, whose invocation command line
@@ -4421,23 +4417,21 @@ msgstr ""
 
 #: grub-core/osdep/linux/blocklist.c:81 grub-core/osdep/linux/blocklist.c:96
 #: grub-core/osdep/linux/blocklist.c:122
-#, fuzzy, c-format
+#, c-format
 msgid "can't retrieve blocklists: %s"
-msgstr "%s: `%s' は `%s' にマウントできます\n"
+msgstr "ブロックリストを取得できません: %s"
 
 #: grub-core/osdep/linux/blocklist.c:84
 msgid "blocksize is not divisible by 512"
 msgstr ""
 
 #: grub-core/osdep/linux/blocklist.c:86
-#, fuzzy
 msgid "invalid zero blocksize"
-msgstr "%s: --auto/-a オプションに対して不当な引数\n"
+msgstr "不正なゼロブロックサイズ"
 
 #: grub-core/osdep/linux/blocklist.c:90 util/setup.c:747
-#, fuzzy
 msgid "can't retrieve blocklists"
-msgstr "%s: `%s' は `%s' にマウントできます\n"
+msgstr "ブロックリストを取得できません"
 
 #: grub-core/osdep/linux/getroot.c:154
 #, c-format
@@ -4445,9 +4439,9 @@ msgid "ioctl RAID_VERSION error: %s"
 msgstr ""
 
 #: grub-core/osdep/linux/getroot.c:160 grub-core/osdep/linux/getroot.c:164
-#, fuzzy, c-format
+#, c-format
 msgid "unsupported RAID version: %d.%d"
-msgstr "GNU アセンブラ バージョン %s (%s)、BFD バージョン %s を使用\n"
+msgstr "RAID バージョン %d.%d はサポートしていません"
 
 #: grub-core/osdep/linux/getroot.c:169
 #, c-format
@@ -4463,14 +4457,14 @@ msgstr ""
 #: grub-core/osdep/linux/hostdisk.c:126 grub-core/osdep/unix/getroot.c:253
 #: grub-core/osdep/unix/getroot.c:642 grub-core/osdep/unix/platform.c:92
 #: grub-core/osdep/unix/platform.c:100
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to open stream from %s: %s"
-msgstr "%s: /etc/fstab がオープンできません: %s\n"
+msgstr "ストレームを %s かオープンできません: %s"
 
 #: grub-core/osdep/linux/getroot.c:1046
-#, fuzzy, c-format
+#, c-format
 msgid "unknown kind of RAID device `%s'"
-msgstr "無効なルートデバイス `%s' です"
+msgstr "不明な RAID デバイス `%s'"
 
 #: grub-core/osdep/linux/ofpath.c:181
 #, c-format
@@ -4485,55 +4479,53 @@ msgid "failed to get canonical path of `%s'"
 msgstr ""
 
 #: grub-core/osdep/linux/ofpath.c:740
-#, fuzzy, c-format
+#, c-format
 msgid "unknown device type %s"
-msgstr "%(service)s on %(device)s"
+msgstr "不明なデバイスタイプ %s"
 
 #: grub-core/osdep/linux/ofpath.c:758 util/ieee1275/grub-ofpathname.c:39
-#, fuzzy, c-format
+#, c-format
 msgid "Usage: %s DEVICE\n"
-msgstr "使い方: ボリューム名 [<デバイスファイル>]\n"
+msgstr "使い方: %s デバイス\n"
 
 #: grub-core/osdep/unix/exec.c:86 grub-core/osdep/unix/exec.c:172
 #: grub-core/osdep/unix/exec.c:217
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to fork: %s"
-msgstr "%s: フォークできません: %s\n"
+msgstr "フォークできません: %s"
 
 #: grub-core/osdep/unix/exec.c:166 grub-core/osdep/unix/exec.c:211
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to create pipe: %s"
-msgstr ".glade ファイルを特定できません: %s"
+msgstr "パイプを作成できません: %s"
 
 #: grub-core/osdep/unix/getroot.c:370
-#, fuzzy
 msgid "cannot save the original directory"
-msgstr "カーネルイメージを圧縮できません"
+msgstr "元のディクレトリを保存できません"
 
 #: grub-core/osdep/unix/getroot.c:423 grub-core/osdep/unix/getroot.c:480
 #: grub-core/osdep/unix/getroot.c:489
-#, fuzzy
 msgid "cannot restore the original directory"
-msgstr "カーネルイメージを圧縮できません"
+msgstr "元のディレクトリに復帰できません"
 
 #. TRANSLATORS: "stat" comes from the name of POSIX function.
 #: grub-core/osdep/unix/getroot.c:551 grub-core/osdep/unix/hostdisk.c:61
 #: grub-core/osdep/unix/relpath.c:73 grub-core/osdep/unix/relpath.c:97
 #: util/getroot.c:160 util/getroot.c:162 util/grub-install.c:782
 #: util/grub-macbless.c:70
-#, fuzzy, c-format
+#, c-format
 msgid "cannot stat `%s': %s"
-msgstr "`%s' を開けません"
+msgstr "`%s' を開けません: %s"
 
 #: grub-core/osdep/unix/hostdisk.c:296
-#, fuzzy, c-format
+#, c-format
 msgid "cannot make temporary file: %s"
-msgstr ".glade ファイルを特定できません: %s"
+msgstr "一時ファイルを作成できません: %s"
 
 #: grub-core/osdep/unix/hostdisk.c:314
-#, fuzzy, c-format
+#, c-format
 msgid "cannot make temporary directory: %s"
-msgstr "カーネルイメージを圧縮できません"
+msgstr "一時ディレクトリを作成できません: %s"
 
 #: grub-core/osdep/unix/platform.c:77
 #, c-format
@@ -4545,9 +4537,9 @@ msgstr ""
 #. TRANSLATORS: This message is shown when required executable `%s'
 #. isn't found.
 #: grub-core/osdep/unix/platform.c:149 grub-core/osdep/unix/platform.c:189
-#, fuzzy, c-format
+#, c-format
 msgid "%s: not found"
-msgstr "%s はディレクトリではありません!"
+msgstr "%s: 見つかりません"
 
 #: grub-core/osdep/unix/platform.c:225
 #, c-format
@@ -4574,9 +4566,8 @@ msgid "cygwin_conv_path() failed"
 msgstr ""
 
 #: grub-core/osdep/windows/hostdisk.c:501 util/grub-install.c:578
-#, fuzzy
 msgid "couldn't retrieve random data"
-msgstr "%s/linux シンボリックリンクを作成できませんでした!"
+msgstr "ランダムデータを取得できません"
 
 #: grub-core/osdep/windows/platform.c:97
 msgid "Insufficient privileges to access firmware, assuming BIOS"
@@ -4587,9 +4578,8 @@ msgid "no EFI routines are available when running in BIOS mode"
 msgstr ""
 
 #: grub-core/osdep/windows/platform.c:240
-#, fuzzy
 msgid "unexpected EFI error"
-msgstr "コメント内でファイル終端 (EOF) に達しました"
+msgstr "予期しない EFI エラー"
 
 #: grub-core/osdep/windows/platform.c:315
 msgid "Couldn't find a free BootNNNN slot"
@@ -4632,14 +4622,12 @@ msgid "your embedding area is unusually small.  core.img won't fit in it."
 msgstr ""
 
 #: grub-core/parttool/msdospart.c:39
-#, fuzzy
 msgid "Make partition active"
-msgstr "利用可能なパーティション一覧:"
+msgstr "パーティションをアクティブにする"
 
 #: grub-core/parttool/msdospart.c:51
-#, fuzzy
 msgid "not a primary partition"
-msgstr "%s はディレクトリではありません!"
+msgstr "プライマリパーティションではありません"
 
 #: grub-core/parttool/msdospart.c:69
 #, c-format
@@ -4652,14 +4640,12 @@ msgid "Cleared active flag on %d. \n"
 msgstr ""
 
 #: grub-core/parttool/msdospart.c:87
-#, fuzzy
 msgid "Change partition type"
-msgstr "IM $IM_CONFIG_XINPUTRC_TYPE $IM_CONFIG_XINPUTRC を削除。"
+msgstr "パーティションタイプの変更"
 
 #: grub-core/parttool/msdospart.c:88
-#, fuzzy
 msgid "Set `hidden' flag in partition type"
-msgstr "パーティションマップの形式を決定する"
+msgstr "パーティションタイプに `hidden' フラグを設定する"
 
 #: grub-core/parttool/msdospart.c:130
 #, c-format
